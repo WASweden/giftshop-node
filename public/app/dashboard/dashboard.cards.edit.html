@@ -1,0 +1,66 @@
+<div class="bg-white round shadow-sm p-4" ng-init="editCard()">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Redigera kort</h3>
+      <div class="text-center">
+        <i ng-show="loading" class="fas fa-spinner fa-spin fa-2x text-primary"></i>
+      </div>
+      <p><small>Id: #{{card.id}}</small> </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <form>
+        <!-- category -->
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Kategori</label>
+          <select class="form-control" ng-model="card.category_name" ng-init="listCategories()">
+            <option ng-repeat="cat in categories" value="{{cat.name}}">{{cat.name}}</option>
+          </select>
+        </div>
+        <!-- price -->
+        <div class="row">
+          <div class="form-group col-md-6">
+            <div class="text-muted">Pris:</div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Belopp..." value="{{card.price}}">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">kr</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+              <div class="text-muted">Färg:</div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" ng-model="card.color" value="{{card.color}}">
+              </div>
+
+          </div>
+        </div>
+
+        <!-- description -->
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Beskrivning</label>
+          <textarea ng-model="card.description" class="form-control" rows="3"></textarea>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <p>Image:</p>
+      <input type="file" name="" value="">
+      <img class="mt-4" ng-src="/img/{{card.image}}" alt="image" />
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-light">
+        <div class="card-body">
+          <button type="button" ng-click="saveCard(card)" class="btn btn-primary btn-block">Save</button>
+          <hr>
+          <input type="checkbox" name="" value="true"> Published
+        </div>
+      </div>
+      <div class="text-right mt-3">
+        <a ng-click="deleteCard(card.id)" class="text-danger">Ta bort</a>
+      </div>
+    </div>
+  </div>
+</div>

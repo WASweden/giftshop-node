@@ -1,0 +1,10 @@
+{
+  "card": {
+      "id": 1,
+      "type": "fixed_price",
+      "price": 200,
+      "color": "00adb8",
+      "image": "card-placeholder.jpg",
+      "description": "Ge 1 person tillgång till rent vatten och förändra liv."
+    }
+}

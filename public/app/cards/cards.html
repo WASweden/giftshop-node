@@ -1,0 +1,31 @@
+<div ng-init="get_cards()" class="row" ng-show="ecm">
+  <div class="col-md-6 offset-md-3 alert alert-warning">
+    <p><i class="fas fa-shopping-cart"></i> {{ecm_body}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3" ng-repeat="card in cards">
+    <div class="card">
+      <img ui-sref="card({cardId: card.id})" class="card-img-top" src="/img/card-placeholder.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#{{card.color}};">{{card.price}} kronor</h5>
+        <p class="card-text">{{card.description}}</p>
+        <div class="text-right">
+          <span ng-click="add_to_cart(card);" class="btn btn-primary">Beställ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card">
+      <img class="card-img-top" src="/img/card-placeholder.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><input class="input-any-amount" placeholder="50" /></h5>
+        <p class="card-text">Valfritt belopp (minimum 50 kr).</p>
+        <div class="text-right">
+          <span href="#" class="btn btn-primary">Beställ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

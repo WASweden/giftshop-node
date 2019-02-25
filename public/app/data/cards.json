@@ -1,0 +1,36 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "price_type": "fixed_price",
+      "price": 200,
+      "color": "00adb8",
+      "store_type": "privat",
+      "description": "Ge 1 person tillgång till rent vatten och förändra liv."
+    },
+    {
+      "id": 2,
+      "price_type": "fixed_price",
+      "price": 400,
+      "color": "0074b6",
+      "store_type": "privat",
+      "description": "Ge 2 personer tillgång till rent vatten och förändra liv."
+    },
+    {
+      "id": 3,
+      "price_type": "fixed_price",
+      "price": 600,
+      "color": "dd92c7",
+      "store_type": "privat",
+      "description": "Ge 3 personer tillgång till rent vatten och förändra liv."
+    },
+    {
+      "id": 4,
+      "price_type": "any_amount",
+      "price": null,
+      "color": null,
+      "store_type": "privat",
+      "description": "Valfritt belopp (minimum 50 kr)."
+    }
+  ]
+}

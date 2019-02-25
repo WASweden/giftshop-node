@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Normal"
+    },
+    {
+      "id": 2,
+      "name": "Jul"
+    },
+    {
+      "id": 3,
+      "name": "Födelsedag"
+    },
+    {
+      "id": 4,
+      "name": "Mors dag"
+    },
+    {
+      "id": 5,
+      "name": "Fars dag"
+    },
+    {
+      "id": 6,
+      "name": "MArks dag"
+    }
+  ]
+}

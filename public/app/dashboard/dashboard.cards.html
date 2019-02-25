@@ -1,0 +1,41 @@
+<div ng-init="listCards()" class="bg-white round shadow-sm p-4">
+  <!-- Cards nav -->
+  <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">För privatpersoner</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">För företag</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Kort kategorier</a>
+  </li>
+</ul>
+  <!-- ./Cards nav -->
+  <div class="row">
+    <div class="col-md-8">
+      <button type="button" ui-sref="dashboard.cards.new" class="btn btn-primary">+ Skapa nytt kort</button>
+      <table class="table mt-3">
+        <tbody>
+          <tr ng-repeat="card in cards">
+            <td>
+              <span class="text-muted">{{card.id}}</span> <a ui-sref="dashboard.edit_card({cardId: card.id})">{{card.description}}</a>
+            </td>
+            <td class="text-right">
+              <small class="text-muted">{{card.category_name}}</small>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+    <div class="col-md-4" ng-controller="CategoryCtrl" ng-init="all()">
+      <i class="fas fa-tag"></i> Categories:<br>
+      <ul>
+        <li ng-repeat="category in categories">{{category.name}} <span class="text-warning" ng-click="destroy(category)">x remove</span></li>
+      </ul>
+      <input type="text" placeholder="Add category" ng-model="category.name" class="">
+      <button type="button" ng-click="create(category)">Add</button>
+    </div>
+  </div>
+</div>
